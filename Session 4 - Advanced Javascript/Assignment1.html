@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form validation</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <div style="width: 40%; margin: 0 auto;">
+            <h6>Fill the form</h6>
+            <form action="javascript:void(0)" method="POST" enctype="multipart/form-data">
+                <label>Name: <input type="text" id="name" required ></label> <br>
+                <label>Cost per km <input type="text" id="cost" required ></label> <br>
+                <label>Vehicle Type <select id="type">
+                                    <option value="2wheeler">2 Wheeler</option>
+                                    <option value="4wheeler">4 wheeler</option>
+                                    </select></label><br>
+                <input type="submit" value="Submit form" onClick="JavaScript:handleClick()">
+            </form>
+        </div>
+        <script type="text/javascript">
+            function handleClick() {
+                alert(document.getElementById('name').value + document.getElementById('cost').value + document.getElementById('type').value);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form validation</title>
+        <meta charset="UTF-8">
+
+    </head>
+    <body>
+        <div style="width: 40%; margin: 0 auto;">
+
+        </div>
+        <script type="text/javascript">
+            function Animal(name){ 
+                this.name=name;
+            } 
+            Animal.prototype.toString=function(){ 
+                return '[Animal "'+this.name+'"]';
+            } 
+            Rabbit.prototype = new Animal();        // Here's where the inheritance occurs 
+            Rabbit.prototype.constructor=Rabbit;       // Otherwise instances of Cat would have a constructor of Mammal 
+            function Rabbit(name){ 
+                this.name=name;
+            } 
+            Rabbit.prototype.toString=function(){ 
+                return '[Rabbit "'+this.name+'"]';
+            } 
+
+            var animal1 = new Rabbit('White small');
+            alert(animal1.toString());
+        </script>
+    </body>
+</html>
